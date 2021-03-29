@@ -1,13 +1,14 @@
 {
-    "name": "新笔趣阁",
-    "url": "www.xbiquge.la",
+    "name": "米趣小说",
+    "url": "www.meegoq.com",
     "version": 100,
     "search": {
-        "url": "http://www.xbiquge.la/modules/article/waps.php@post->searchkey=${key}",
-        "list": "tbody>tr:nth-child(n+2)",
-        "name": "td:nth-child(1)>a",
-        "author": "td:nth-child(3)",
-        "detail": "td:nth-child(1)>a"
+        "url": "https://www.meegoq.com/search.htm?keyword=${key}",
+        "list": "section>ul>li:not(:last-child):not(:first-child)",
+        "name": "span.n2>a",
+        "author": "span.a2>a",
+        "cover": "",
+        "detail": "span.n2>a"
     },
     "detail": {
         "name":"meta[property=og:novel:book_name]@attr->content",
@@ -17,10 +18,10 @@
         "status":"meta[property=og:novel:status]@attr->content",
         "update":"meta[property=og:novel:update_time]@attr->content",
         "lastChapter":"meta[property=og:novel:lastest_chapter_name]@attr->content",
-        "catalog":""
+        "catalog": "a._blank"
     },
     "catalog": {
-        "list": "dl>dd",
+        "list": "article>ul>li:nth-child(n+13)",
         "name": "a",
         "chapter": "a"
     },

@@ -1,13 +1,14 @@
 {
-    "name": "新笔趣阁",
-    "url": "www.xbiquge.la",
+    "name": "九桃小说",
+    "url": "www.9txs.com",
     "version": 100,
     "search": {
-        "url": "http://www.xbiquge.la/modules/article/waps.php@post->searchkey=${key}",
-        "list": "tbody>tr:nth-child(n+2)",
-        "name": "td:nth-child(1)>a",
-        "author": "td:nth-child(3)",
-        "detail": "td:nth-child(1)>a"
+        "url": "https://so.9txs.com/www/@post->searchkey=${key}",
+        "list": ".box.left.w_840>ul>li",
+        "name": "a.bookname",
+        "author": "p>a.author",
+        "cover": "a.bookimg>img",
+        "detail": "a.bookname"
     },
     "detail": {
         "name":"meta[property=og:novel:book_name]@attr->content",
@@ -17,14 +18,18 @@
         "status":"meta[property=og:novel:status]@attr->content",
         "update":"meta[property=og:novel:update_time]@attr->content",
         "lastChapter":"meta[property=og:novel:lastest_chapter_name]@attr->content",
-        "catalog":""
+        "catalog":"a.more"
     },
     "catalog": {
-        "list": "dl>dd",
+        "list": ".read>dl>dd",
+        "booklet": {
+            "name": "dt>b",
+            "list": "dd"
+        },
         "name": "a",
         "chapter": "a"
     },
     "chapter": {
-        "content": "#content"
+        "content": "#content>p"
     }
 }

@@ -1,13 +1,14 @@
 {
-    "name": "新笔趣阁",
-    "url": "www.xbiquge.la",
-    "version": 100,
+    "name":"完本神站",
+    "url":"www.xinwanben.com",
+    "version":100,
     "search": {
-        "url": "http://www.xbiquge.la/modules/article/waps.php@post->searchkey=${key}",
-        "list": "tbody>tr:nth-child(n+2)",
-        "name": "td:nth-child(1)>a",
-        "author": "td:nth-child(3)",
-        "detail": "td:nth-child(1)>a"
+        "url":"https://m.xinwanben.com/s.php@post->keyword=${key}",
+        "list":".listBottom>ul>a",
+        "name":"h4",
+        "author":"h5",
+        "cover":"img",
+        "detail":"${a}/@replace->m.xin->www.xin"
     },
     "detail": {
         "name":"meta[property=og:novel:book_name]@attr->content",
@@ -20,11 +21,11 @@
         "catalog":""
     },
     "catalog": {
-        "list": "dl>dd",
-        "name": "a",
-        "chapter": "a"
+        "list":".chapter>ul>li",
+        "name":"a",
+        "chapter":"a"
     },
     "chapter": {
-        "content": "#content"
+        "content":".raderCon>p"
     }
 }
