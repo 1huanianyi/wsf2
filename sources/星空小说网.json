@@ -20,7 +20,7 @@
         "catalog": "#content-tab>div>div>div.column_left.fl>div.header>div>a:nth-child(2)"
     },
     "catalog": {
-        "list": "#chapter",
+        "list": "#listsss>div:nth-child(n-1)>#chapter",
         "name": "a",
         "chapter": "a"
     },
