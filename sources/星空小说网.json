@@ -11,12 +11,13 @@
         "detail": "dl>dd>a"
     },
     "detail": {
-        "summary": "",
-        "status": "",
-        "category": "",
-        "words": "",
-        "update": "",
-        "lastChapter": "",
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[property=og:description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:lastest_chapter_name]@attr->content",
         "catalog": "#content-tab>div>div>div.column_left.fl>div.header>div>a:nth-child(2)"
     },
     "catalog": {
